@@ -1,0 +1,83 @@
+
+        GPIOPinWrite(GPIO_PORTF_BASE, RED_LED|BLUE_LED|GREEN_LED, RED_LED);     // Turn on the red LED
+        SysCtlDelay(2000000);                                                   // Delay for a bit
+        GPIOPinWrite(GPIO_PORTF_BASE, RED_LED|BLUE_LED|GREEN_LED, BLUE_LED);    // Turn on the blue LED
+        SysCtlDelay(2000000);                                                   // Delay for a bit
+        GPIOPinWrite(GPIO_PORTF_BASE, RED_LED|BLUE_LED|GREEN_LED, GREEN_LED);   // Turn on the green LED
+        SysCtlDelay(2000000);                                                   // Delay for a bit
+
+
+
+    //signed int currXspeed = 0;
+    //signed int currYspeed = 0;
+    //signed int currZspeed = 0;
+    //signed int tarXspeed = 0;
+    //signed int tarYspeed = 0;
+    //signed int tarZspeed = 0;
+    //bool Xtumbling = 0;
+    //bool Ytumbling = 0;
+    //bool Ztumbling = 0;
+
+
+    /*
+    // DETUMBLING PROTOCOL
+    if(Xtumbling | Ytumbling | Ztumbling){
+        if(Xtumbling){
+            while(Xtumbling){
+                if(currSpeed < saturation)
+
+                }
+            }
+        }else if(Ytumbling){
+            detumble(2, &currYspeed, &tarYspeed);
+        }else if(Ztumbling){
+            detumble(3, &currZspeed, &tarZspeed);
+        }
+    }
+    */
+    
+    
+    
+    
+/* AUSTINS CODE */
+
+/*    if(rwXSaturated == 1){
+        desaturate(1, 0);
+    }
+    else if(rwYSaturated == 1){
+        desaturate(2, 0);
+    }
+    else if(rwZSaturated == 1){
+        desaturate(3, 1);
+    }
+
+int desaturate(int targetWheel, int directionFlag)
+{
+    if(targetWheel == 1){
+        //Turn on magnetorquer Z pin
+        if(directionFlag == 0){
+            // Turn on direction pin +
+        }
+        else if(directionFlag == 1){
+            // Turn on direction pin -
+        }
+    }
+    else if(targetWHeel == 2){
+        //Turn on magnetorquer X pin
+        if(directionFlag == 0){
+            // Turn on direction pin +
+        }
+        else if(directionFlag == 1){
+            // Turn on direction pin -
+        }
+    }
+    else if(targetWheel == 3){
+        //Turn on magnetorquer Y pin
+        if(directionFlag == 0){
+            // Turn on direction pin +
+        }
+        else if(directionFlag == 1){
+            // Turn on direction pin -
+        }
+    }
+}
